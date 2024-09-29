@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM Company Lead Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /*background: linear-gradient(144deg, rgba(126,39,156,1) 0%, rgb(157, 149, 39) 49%) no-repeat center center fixed; */
+            
+            /*background: url('leadback.jpg') no-repeat center center fixed;*/
+            background-size: cover;
+            background-color: #ADD8E6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #F0FFFF; /* White with 50% opacity */
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+            width: 400px;
+            max-height: 70vh; /* Set a maximum height */
+            overflow-y: auto; /* Enable vertical scrolling */
+            
+            
+        }
+
+        /* Customize scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 20px;
+            background: linear-gradient(#ccc);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            color: #000000;
+            text-decoration: solid;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #000000;
+        }
+        input[type="text"],
+        select {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #8914fed0;
+            color: rgb(25, 23, 23);
+            border: 22px;
+            border-radius: 54px;
+            border-color: #000000;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #609af9c9;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #000000;
+        }
+        
+    </style>
+</head> 
+<body>  
+    <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+<div class="form-container">
+    <h2>Fill Information</h2>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DNS000001PAjZ" method="POST">
+
+        <input type="hidden" name="oid" value="00DNS000001PAjZ">
+        <input type="hidden" name="retURL" value="">
+
+        <label for="salutation"> Salutation</label>
+        <select id="salutation" name="salutation">
+            <option value="">--None--</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Miss.">Miss.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Mrs.">Mrs.</option>
+            <option value="Dr.">Dr.</option>
+            <option value="Prof.">Prof.</option>
+            <option value="Mx.">Mx.</option>
+        </select>
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" size="20" type="text" />
+
+        <label for="phone">Phone</label>
+        <input id="phone" maxlength="40" name="phone" size="20" type="text" />
+
+        <label for="mobile">Mobile</label>
+        <input id="mobile" maxlength="40" name="mobile" size="20" type="text" />
+
+        <label for="company">Company</label>
+        <input id="company" maxlength="40" name="company" size="20" type="text" />
+
+        <label for="city">City</label>
+        <input id="city" maxlength="40" name="city" size="20" type="text" />
+
+        <label for="state">State/Province</label>
+        <input id="state" maxlength="20" name="state" size="20" type="text" />
+
+        <input type="submit" name="submit" value="Submit">
+
+    </form>
+    <div class="footer-note">
+        
+        <p>© 2024 SM Company. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>

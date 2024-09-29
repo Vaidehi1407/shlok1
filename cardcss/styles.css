@@ -1,0 +1,123 @@
+/* ------------ GOOGLE FONTS ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* ------------ VARIABLES ------------ */
+:root{
+  /* FONT */
+  --font: 'Poppins', sans-serif;
+
+  /* COLORS */
+  --color: #0a1172; /* Navy Blue */
+  --bg-color: #f4f4f4; /* Background Color */
+  --highlight-color: #046ee5; /* Electric Blue */
+}
+
+/* ------------ BASE ------------ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+/* Swiper configuration */
+.swiper{
+  width: 100%;
+  /* Move the Swiper component upward */
+  margin-top: -50px; /* Adjust this value to move it further up */
+  /* Alternatively, you could use top */
+  position: relative;
+  top: -50px; /* Adjust this value for further upward movement */
+}
+
+.swiper-wrapper{
+  width: 100%;
+  height: 35em;
+  display: flex;
+  align-items: center;
+}
+
+.card{
+  width: 15em; /* Adjusted width to fit 5 cards */
+  height: 90%;
+  background-color: #fff;
+  border-radius: 2em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .2);
+  padding: 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1em; /* Adjust margin for better spacing between cards */
+}
+
+.swiper-slide{
+  flex-shrink: 0; /* Ensures each slide takes its space */
+  width: calc(100% / 5); /* Display 5 cards at a time */
+}
+
+.swiper-slide:not(.swiper-slide-active){
+  filter: blur(1px); /* Slight blur on inactive cards */
+}
+
+.card__image{
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  border: 5px solid var(--color);
+  padding: 3px;
+  margin-bottom: 2em;
+}
+
+.card__image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__title{
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+  top: .2em;
+}
+
+.card__name{
+  color: var(--highlight-color);
+}
+
+.card__text{
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 1em 0;
+}
+
+.card__btn{
+  background-color: var(--highlight-color);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: .5em;
+  border-radius: .5em;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+/* Swiper Styling */
+.swiper-slide-active .card {
+  transform: scale(1.05); /* Slightly enlarges active card */
+  transition: transform 0.3s;
+}
