@@ -359,7 +359,16 @@ nav h3 {
     top: 0;
 }
 
-
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    color: #000; /* You can adjust this color if needed */
+    font-size: 16px;
+    cursor: pointer;
+}
+.transparent-button:hover {
+    text-decoration: underline;
+}
 
 #fixed-image {
     height: 30vw;
